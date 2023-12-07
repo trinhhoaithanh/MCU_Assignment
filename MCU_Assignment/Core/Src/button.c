@@ -17,8 +17,7 @@ int isButtonPressed(int index){
 }
 
 void subKeyProcess(int index){
-	//TODO
-//	HAL_GPIO_TogglePin(LED_RED1_GPIO_Port, LED_RED1_Pin);
+
 	button_flag[index] = 1;
 }
 
