@@ -2,13 +2,12 @@
 #include "global.h"
 
 int status = 0;
-int red = 5;
-int green = 3;
-int yellow = 2;
+int red = 10;
+int green = 7;
+int yellow = 3;
 
 int sec1 = 0;
 int sec2 = 0;
-
 
 void clearAllLED(){
 	HAL_GPIO_WritePin(Traffic_Light1_1_GPIO_Port, Traffic_Light1_1_Pin, RESET);
@@ -107,4 +106,3 @@ void toggleLedGREEN(){
 	HAL_GPIO_TogglePin(Traffic_Light1_2_GPIO_Port, Traffic_Light1_2_Pin);
 	HAL_GPIO_TogglePin(Traffic_Light2_2_GPIO_Port, Traffic_Light2_2_Pin);
 }
-

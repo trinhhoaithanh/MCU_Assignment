@@ -2,6 +2,8 @@
 #ifndef INC_GLOBAL_H_
 #define INC_GLOBAL_H_
 
+#include "software_timer.h"
+#include "button.h"
 #include "main.h"
 
 #define INIT          1
@@ -22,11 +24,13 @@
 #define MAX_LED       4
 
 extern int status;
+extern int index_led;
 extern int red;
 extern int green;
 extern int yellow;
 extern int sec1;
 extern int sec2;
+extern TIM_HandleTypeDef htim3;
 
 void clearAllLED();
 void turnonTrafficLight1(int led);
@@ -35,5 +39,6 @@ void turnonPedestrianLight(int led);
 void toggleLedRED();
 void toggleLedGREEN();
 void toggleLedYELLOW();
+
 
 #endif /* INC_GLOBAL_H_ */
