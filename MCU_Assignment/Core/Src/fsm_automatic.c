@@ -1,17 +1,5 @@
-/*
- * fsm_automatic.c
- *
- *  Created on: November 28, 2023
- *      Author: Hoai Thanh
- */
-
-
 #include "fsm_automatic.h"
-
-
 int index_led = 0;
-
-
 void fsm_automatic_run(){
 	switch(status){
 	case INIT:
