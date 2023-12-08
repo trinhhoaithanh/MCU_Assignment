@@ -8,13 +8,13 @@
 #ifndef INC_FSM_PEDESTRIAN_H_
 #define INC_FSM_PEDESTRIAN_H_
 
-<<<<<<< HEAD
-=======
 #include "global.h"
 
+<<<<<<< HEAD
+=======
 void toggle_buzzer(int volume);
 void buzzer_run();
->>>>>>> main
+>>>>>>> 5bd5a50df83683faebf748d63f737658a67b36ed
 void fsm_pedestrian_run();
 
 #endif /* INC_FSM_PEDESTRIAN_H_ */

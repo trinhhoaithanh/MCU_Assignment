@@ -1,0 +1,22 @@
+09:55:12 **** Incremental Build of configuration Debug for project MCU_Assignment ****
+make -j8 all 
+arm-none-eabi-gcc -o "MCU_Assignment.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Hoai Thanh\Documents\VXK-VDK\MCU_Assignment\MCU_Assignment\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MCU_Assignment.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MCU_Assignment.elf
+ 
+arm-none-eabi-size   MCU_Assignment.elf 
+arm-none-eabi-objdump -h -S  MCU_Assignment.elf  > "MCU_Assignment.list"
+   text	   data	    bss	    dec	    hex	filename
+   8596	     20	   1716	  10332	   285c	MCU_Assignment.elf
+arm-none-eabi-objcopy  -O ihex  MCU_Assignment.elf  "MCU_Assignment.hex"
+arm-none-eabi-objcopy  -O binary  MCU_Assignment.elf  "MCU_Assignment.bin"
+Finished building: default.size.stdout
+ 
+Finished building: MCU_Assignment.hex
+Finished building: MCU_Assignment.list
+ 
+Finished building: MCU_Assignment.bin
+ 
+ 
+
+09:55:14 Build Finished. 0 errors, 0 warnings. (took 1s.456ms)
+
