@@ -1,7 +1,8 @@
-global.c:12:6:clearAllLED	8	static
-global.c:23:6:turnonTrafficLight1	16	static
-global.c:46:6:turnonTrafficLight2	16	static
-global.c:69:6:turnonPedestrianLight	16	static
-global.c:92:6:toggleLedRED	8	static
-global.c:97:6:toggleLedYELLOW	8	static
-global.c:105:6:toggleLedGREEN	8	static
+global.c:14:6:updateClockBuffer	16	static
+global.c:21:6:clearAllLED	8	static
+global.c:32:6:turnonTrafficLight1	16	static
+global.c:55:6:turnonTrafficLight2	16	static
+global.c:78:6:turnonPedestrianLight	16	static
+global.c:101:6:toggleLedRED	8	static
+global.c:106:6:toggleLedYELLOW	8	static
+global.c:114:6:toggleLedGREEN	8	static

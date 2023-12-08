@@ -9,6 +9,15 @@ int yellow = 3;
 int sec1 = 0;
 int sec2 = 0;
 
+int led_buffer[4] = {0, 0, 0, 0};
+
+void updateClockBuffer(int sec1, int sec2){
+	led_buffer[0] = sec1/10;
+	led_buffer[1] = sec1%10;
+	led_buffer[2] = sec2/10;
+	led_buffer[3] = sec2%10;
+}
+
 void clearAllLED(){
 	HAL_GPIO_WritePin(Traffic_Light1_1_GPIO_Port, Traffic_Light1_1_Pin, RESET);
 	HAL_GPIO_WritePin(Traffic_Light1_2_GPIO_Port, Traffic_Light1_2_Pin, RESET);

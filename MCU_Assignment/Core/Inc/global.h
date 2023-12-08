@@ -30,6 +30,7 @@ extern int green;
 extern int yellow;
 extern int sec1;
 extern int sec2;
+extern int led_buffer[4];
 extern TIM_HandleTypeDef htim3;
 
 void clearAllLED();
@@ -39,6 +40,7 @@ void turnonPedestrianLight(int led);
 void toggleLedRED();
 void toggleLedGREEN();
 void toggleLedYELLOW();
+void updateClockBuffer(int sec1, int sec2);
 
 
 #endif /* INC_GLOBAL_H_ */
