@@ -1,0 +1,23 @@
+12:13:04 **** Incremental Build of configuration Debug for project MCU_Project ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "MCU_Project.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Hoai Thanh\Documents\VXK-VDK\MCU_Project-main\STM32_Project\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MCU_Project.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: MCU_Project.elf
+ 
+arm-none-eabi-size   MCU_Project.elf 
+arm-none-eabi-objdump -h -S  MCU_Project.elf  > "MCU_Project.list"
+   text	   data	    bss	    dec	    hex	filename
+  15952	    124	   1900	  17976	   4638	MCU_Project.elf
+arm-none-eabi-objcopy  -O ihex  MCU_Project.elf  "MCU_Project.hex"
+Finished building: default.size.stdout
+arm-none-eabi-objcopy  -O binary  MCU_Project.elf  "MCU_Project.bin"
+ 
+Finished building: MCU_Project.list
+Finished building: MCU_Project.hex
+ 
+Finished building: MCU_Project.bin
+ 
+ 
+
+12:13:06 Build Finished. 0 errors, 0 warnings. (took 2s.299ms)
+
