@@ -17,7 +17,6 @@ void ledBalance(){
 void fsm_manual_run(){
 	switch(status){
 	case MAN_RED:
-		updateClockBuffer(2, redMod);
 		if(timer_flag[2] == 1){
 			setTimer(250, 2);
 			toggleLedRED();
@@ -36,7 +35,6 @@ void fsm_manual_run(){
 		}
 		break;
 	case MAN_YELLOW:
-		updateClockBuffer(3, yellowMod);
 		if(timer_flag[2] == 1){
 			setTimer(250, 2);
 			toggleLedYELLOW();
@@ -55,7 +53,6 @@ void fsm_manual_run(){
 		}
 		break;
 	case MAN_GREEN:
-		updateClockBuffer(4, greenMod);
 		if(timer_flag[2] == 1){
 			setTimer(250, 2);
 			toggleLedGREEN();
